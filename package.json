@@ -1,6 +1,6 @@
 {
   "name": "my-app",
-  "homepage:": "https://michamn.github.io/soundflow",
+  "homepage": "https://michamn.github.io/soundflow",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
