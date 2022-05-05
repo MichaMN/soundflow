@@ -4,8 +4,8 @@ import "react-h5-audio-player/lib/styles.css";
 
 const Sound = (props) => {
   const { name, playCount, setPlayCount } = props;
-  const audio = "/assets/audio/" + name + ".mp3";
-  const icon = "assets/icon/" + name + ".svg";
+  const audio = require("../../assets/audio/" + name + ".mp3");
+  const icon = require("../../assets/icon/" + name + ".svg");
   const iconNode = <img src={icon} alt="" />;
   const ref = createRef();
 
