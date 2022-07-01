@@ -3,13 +3,50 @@
 .App {
   text-align: center;
   background-color: #e5e5ea;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   overflow: hidden;
   user-select: none;
   -webkit-font-smoothing: antialiased;
   font-family: "Dosis", sans-serif;
   letter-spacing: 0.5px;
+
+  &::before,
+  &::after {
+    content: "";
+    background: rgb(241, 113, 1);
+    background: radial-gradient(
+      circle,
+      rgba(241, 113, 1, 1) 0%,
+      rgba(0, 212, 255, 0) 60%
+    );
+    width: 150vw;
+    height: 150vw;
+    top: 0;
+    transform: translate(-30%, -75%);
+    opacity: 0.4;
+    left: -50%;
+    display: block;
+    z-index: 5;
+    position: absolute;
+  }
+  @media (max-width: 500px) {
+    &::before,
+    &::after {
+      width: 200vw;
+      height: 200vw;
+      opacity: 0.3;
+    }
+  }
+
+  &::after {
+    top: auto;
+    right: 0;
+    bottom: 0;
+    left: auto;
+    transform: translate(60%, 60%);
+    opacity: 0.2;
+  }
 }
 
 .App-logo {
@@ -34,9 +71,9 @@
     background-repeat: repeat-x;
     overflow: hidden;
     animation: move 5.1s linear infinite;
-    box-shadow: -1px 2px 18px 1px rgba(0, 0, 0, 0.28);
-    -webkit-box-shadow: -1px 2px 18px 1px rgba(0, 0, 0, 0.28);
-    -moz-box-shadow: -1px 2px 18px 1px rgba(0, 0, 0, 0.28);
+    // box-shadow: -1px 2px 18px 1px rgba(0, 0, 0, 0.28);
+    // -webkit-box-shadow: -1px 2px 18px 1px rgba(0, 0, 0, 0.28);
+    // -moz-box-shadow: -1px 2px 18px 1px rgba(0, 0, 0, 0.28);
     animation-play-state: paused;
 
     &.playing {
@@ -68,11 +105,15 @@
   right: 0;
   width: 200vw;
   height: 200vh;
-  background-color: #1c1c1e;
+  background-color: #000000;
   z-index: 1;
   transform: rotate(270deg);
   transform-origin: top right;
   transition: transform 0.5s ease;
+}
+
+.bg-accent {
+  background-color: var(--accent-color);
 }
 
 [data-theme="dark"] {
@@ -94,17 +135,21 @@
 
 .container {
   position: relative;
-  z-index: 2;
+  z-index: 10;
   color: var(--text-color);
   transition: color 0.5s ease background-color 0.5s ease;
-  padding: 0 50px;
+  padding: 0 20px;
+  max-width: 1080px;
+  margin: 0 auto;
 }
 
 .header {
   max-width: 900px;
-  margin: 50px 0;
+  margin: 20px 0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+
   &__logo {
     height: 50px;
     width: auto;
@@ -189,12 +234,16 @@
     text-align: left;
     display: flex;
     align-items: center;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    opacity: 1;
 
     &::before {
       content: "";
       display: inline-block;
       height: 1px;
-      width: 20px;
+      width: 15px;
       background-color: var(--accent-color);
       margin-right: 10px;
       margin-top: 3px;
@@ -208,17 +257,18 @@
     flex-wrap: wrap;
     margin: 0 auto;
     justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 22vw;
+    grid-gap: 20px;
   }
 
   &__wrapper {
     position: relative;
-    height: 120px;
-    width: 140px;
     border-radius: 10px;
     overflow: hidden;
     display: flex;
     align-items: flex-end;
-    margin: 20px;
   }
 }
 
@@ -290,9 +340,9 @@
     width: 100%;
     height: 100%;
     transition: opacity 0.5s ease;
-    box-shadow: inset 0px 0px 0px 1px var(--border-color);
     border-radius: 12px;
-    background-color: var(--white);
+    background-color: rgb(0, 0, 0);
+    opacity: 0;
     z-index: -1;
   }
 }
@@ -337,10 +387,10 @@
   --text-color: black;
   --border-color: rgba(0, 0, 0, 0.2);
   --white: #fff;
-  --accent-color: #fc7070;
+  --accent-color: #d58700;
   --bg-color: #e4e6e4;
   --grey-1: #e5e5ea;
-  --grey-2: #f2f2f7;
+  --grey-2: #ffffff4d;
   --grey-3: #ffffff;
 }
 [data-theme="dark"] {
@@ -348,6 +398,6 @@
   --border-color: rgba(255, 255, 255, 0.2);
   --white: #fff;
   --grey-1: #1c1c1e;
-  --grey-2: #2c2c2e;
-  --grey-3: #3a3a3c;
+  --grey-2: #ffffff10;
+  --grey-3: #ffffff08;
 }

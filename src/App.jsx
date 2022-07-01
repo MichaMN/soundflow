@@ -30,8 +30,8 @@ function App() {
           </div>
         </div>
 
+        <div className="audio__title">scenes</div>
         <div className="audio">
-          <div className="audio__title">scenes</div>
           <div className="audio__container">
             <Sound
               name="rain"
@@ -39,6 +39,11 @@ function App() {
               playCount={playCount}
             />
           </div>
+
+          <div className="bg-accent"></div>
+
+          <button onClick={closeApp}>exit</button>
+          <div className="bg-accent bg-accent--bottom"></div>
         </div>
       </div>
 
