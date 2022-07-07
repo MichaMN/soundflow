@@ -62,7 +62,6 @@
   &__block {
     position: relative;
     height: 50vh;
-    background-color: var(--bg-after);
     transition: background-color 0.3s ease-out;
     &::after {
       height: 100%;
@@ -70,7 +69,6 @@
       top: 0;
       left: 0;
       width: 100%;
-      background-color: var(--bg-after);
       z-index: 1;
       position: absolute;
     }
@@ -79,8 +77,8 @@
   &__block::after,
   &__curve::after {
     transition: background-color 0.3s ease-out;
-    background-color: var(--accent-color);
-    opacity: 0.1;
+    background-color: var(--header-color);
+    opacity: 1;
   }
 
   &__curve {
@@ -152,23 +150,23 @@
 
       div {
         transform: translate(-50%, -50%) scale(1);
-        opacity: 0.2;
+        opacity: 0.1;
 
         &:nth-child(1) {
-          opacity: 0.1;
+          opacity: 0.05;
         }
 
         &:nth-child(2) {
-          opacity: 0.05;
+          opacity: 0;
         }
       }
     }
 
     div {
-      border: 1px solid var(--text-color);
+      border: 1px solid var(--accent-color);
       position: absolute;
-      width: 350%;
-      height: 350%;
+      width: 300%;
+      height: 300%;
       border-radius: 100%;
       top: 50%;
       left: 50%;
@@ -177,8 +175,8 @@
       opacity: 0;
 
       &:nth-child(1) {
-        width: 600%;
-        height: 600%;
+        width: 500%;
+        height: 500%;
         transition-delay: 100ms;
       }
 
@@ -264,6 +262,7 @@
   align-items: center;
   position: relative;
   z-index: 100;
+  color: white;
 
   &__logo {
     height: 50px;
@@ -273,17 +272,117 @@
   &__btns {
     display: flex;
     align-items: center;
+    position: relative;
+  }
+
+  &__theme-menu-btn {
+    height: 30px;
+    width: 30px;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    overflow: hidden;
+    transition: background-color 0.2s ease-out;
+
+    &:hover {
+      background-color: var(--border-color);
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 100%;
+      height: 100%;
+      transform: translateY(-100%);
+      transition: transform 0.3s ease-out;
+    }
+
+    &::before {
+      background-image: url("../public/assets/image/close.svg");
+      background-size: 65%;
+    }
+
+    &::after {
+      background-image: url("../public/assets/image/drop.svg");
+    }
+
+    &.open {
+      &::before {
+        transform: translateY(0);
+      }
+      &::after {
+        transform: translateY(0);
+      }
+    }
+
+    &.open + .header__theme-menu {
+      opacity: 1;
+      transform: translateY(0px);
+      visibility: visible;
+      transform: rotate(0deg);
+    }
+  }
+
+  &__theme-menu {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    padding: 15px;
+    background-color: var(--accent-color);
+    display: flex;
+    border-radius: 16px 0px 16px 16px;
+    opacity: 0;
+    transition: all 0.4s ease-out;
+    transform: translateY(-5px);
+    visibility: hidden;
   }
 
   &__theme-btn {
     height: 30px;
     width: 30px;
     border: 1px solid var(--border-color);
-    border-radius: 20px;
-    background-image: url("../public/assets/image/drop.svg");
-    background-repeat: no-repeat;
+    border-radius: 6px;
     background-position: center;
+    background-size: 60%;
+    background-repeat: no-repeat;
     cursor: pointer;
+    transition: background-color 0.2s ease-out;
+
+    &:hover {
+      background-color: var(--border-color);
+    }
+
+    &.active {
+      background-color: var(--border-color);
+    }
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    &.avocado {
+      background-image: url("../public/assets/image/theme/avocado.png");
+    }
+    &.blueberry {
+      background-image: url("../public/assets/image/theme/blueberry.png");
+    }
+    &.cherry {
+      background-image: url("../public/assets/image/theme/cherry.png");
+    }
+    &.pineapple {
+      background-image: url("../public/assets/image/theme/pineapple.png");
+    }
+    &.eggplant {
+      background-image: url("../public/assets/image/theme/eggplant.png");
+    }
+    &.peach {
+      background-image: url("../public/assets/image/theme/peach.png");
+    }
   }
 
   &__divider {
@@ -302,6 +401,11 @@
     cursor: pointer;
     position: relative;
     overflow: hidden;
+    transition: background-color 0.2s ease-out;
+
+    &:hover {
+      background-color: var(--border-color);
+    }
   }
 
   &__mode-container {
@@ -529,20 +633,63 @@
   --text-color: black;
   --border-color: rgba(0, 0, 0, 0.2);
   --white: #fff;
-  --accent-color: #00bcd5;
+  --accent-color: #5d65f6;
   --bg-color: #e4e6e4;
   --grey-1: #e5e5ea;
   --grey-2: #ffffff4d;
   --grey-3: #ffffff;
-  --bg-after: #ffffff;
-  --bg: #000000;
+  --bg: #1a1d21;
 }
 [data-theme="dark"] {
   --text-color: white;
-  --border-color: rgba(255, 255, 255, 0.2);
+  --border-color: rgba(0, 0, 0, 0.2);
   --white: #fff;
   --grey-1: #1c1c1e;
-  --grey-2: #000000;
-  --grey-3: #121212;
-  --bg-after: #000000;
+  --grey-2: #222529;
+  --grey-3: #1c1c1e;
+}
+
+[data-theme-color="blueberry"] {
+  --accent-color: #6d94bf;
+  --header-color: #323c4a;
+}
+[data-theme-color="blueberry"][data-theme="dark"] {
+  --accent-color: #5b7aa2;
+  --header-color: #1e2228;
+}
+
+[data-theme-color="avocado"] {
+  --accent-color: #e59e6d;
+  --header-color: #374536;
+}
+[data-theme-color="avocado"][data-theme="dark"] {
+  --accent-color: #c1a87f;
+  --header-color: #1e281f;
+}
+
+[data-theme-color="cherry"] {
+  --accent-color: #b73452;
+  --header-color: #1a1c20;
+}
+[data-theme-color="cherry"][data-theme="dark"] {
+  --accent-color: #d9585f;
+  --header-color: #333333;
+}
+
+[data-theme-color="eggplant"] {
+  --accent-color: #5a8f84;
+  --header-color: #483848;
+}
+[data-theme-color="eggplant"][data-theme="dark"] {
+  --accent-color: #6a9289;
+  --header-color: #19171d;
+}
+
+[data-theme-color="peach"] {
+  --accent-color: #e59e6d;
+  --header-color: #36797e;
+}
+[data-theme-color="peach"][data-theme="dark"] {
+  --accent-color: #e1a478;
+  --header-color: #1e3337;
 }
