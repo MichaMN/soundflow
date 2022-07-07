@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Sound from "./components/sound/Sound";
 import "./App.scss";
 
 function App() {
   const [theme, setTheme] = useState("light");
+  const [themeColor, setThemeColor] = useState("blueberry");
   const [playCount, setPlayCount] = useState(0);
+  const [themeMenuOpen, setThemeMenuOpen] = useState(true);
 
   const toggleTheme = () => {
     const wobble = document.querySelector(".bg__curve");
@@ -12,8 +14,20 @@ function App() {
     wobble.classList.toggle("jelly");
   };
 
+  const toggleThemeMenu = (e) => {
+    e.target.classList.toggle("open");
+  };
+
+  const handleThemeColor = (e) => {
+    setThemeColor(e.target.getAttribute("theme"));
+    document.querySelectorAll(".header__theme-btn").forEach((el) => {
+      el.classList.remove("active");
+    });
+    e.target.classList.add("active");
+  };
+
   return (
-    <div className="App" data-theme={theme}>
+    <div className="App" data-theme={theme} data-theme-color={themeColor}>
       <div className="container">
         <div className="header">
           <div className="logo">
@@ -36,7 +50,14 @@ function App() {
             </div>
 
             <div className="header__divider"></div>
-            <div className="header__theme-btn"></div>
+            <div className="header__theme-menu-btn" onClick={toggleThemeMenu}></div>
+            <div className="header__theme-menu">
+              <div className="header__theme-btn blueberry" theme="blueberry" onClick={handleThemeColor}></div>
+              <div className="header__theme-btn avocado" theme="avocado" onClick={handleThemeColor}></div>
+              <div className="header__theme-btn cherry" theme="cherry" onClick={handleThemeColor}></div>
+              <div className="header__theme-btn peach" theme="peach" onClick={handleThemeColor}></div>
+              <div className="header__theme-btn eggplant" theme="eggplant" onClick={handleThemeColor}></div>
+            </div>
           </div>
         </div>
 
