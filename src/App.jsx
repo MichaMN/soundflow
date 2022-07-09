@@ -59,23 +59,18 @@ function App() {
               <div className="header__theme-btn eggplant" theme="eggplant" onClick={handleThemeColor}></div>
             </div>
           </div>
-        </div>
 
-        <div className="audio__title">scenes</div>
-        <div className="audio">
           <div className="bg">
             <div className="bg__block "></div>
             <div className="bg__curve"></div>
           </div>
+        </div>
 
+        <div className="audio">
+          <div className="audio__title">scenes</div>
           <div className="audio__container">
             <Sound name="rain" setPlayCount={setPlayCount} playCount={playCount} />
-            <Sound name="rain" setPlayCount={setPlayCount} playCount={playCount} />
           </div>
-
-          <div className="bg-accent"></div>
-
-          <div className="bg-accent bg-accent--bottom"></div>
         </div>
       </div>
 
