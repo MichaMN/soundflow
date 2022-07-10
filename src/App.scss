@@ -640,9 +640,15 @@
   transform: translateY(5px);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media only screen and (max-width: 600px) {
+  .audio__container {
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 100px;
+  }
+
+  .header {
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 }
 
