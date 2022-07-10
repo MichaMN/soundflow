@@ -6,7 +6,6 @@ function App() {
   const [theme, setTheme] = useState("light");
   const [themeColor, setThemeColor] = useState("blueberry");
   const [playCount, setPlayCount] = useState(0);
-  const [themeMenuOpen, setThemeMenuOpen] = useState(true);
 
   const toggleTheme = () => {
     const wobble = document.querySelector(".bg__curve");

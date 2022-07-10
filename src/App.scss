@@ -13,11 +13,6 @@
   letter-spacing: 0.5px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
 @keyframes jelly-absorb {
   from,
   to {
@@ -52,8 +47,8 @@
 
 .bg {
   position: absolute;
-  width: 100vw;
-  height: 100%;
+  width: 101vw;
+  height: 101%;
   top: 0;
   left: 50%;
   opacity: 1;
