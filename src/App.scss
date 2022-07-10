@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Dosis&display=swap");
+@import url("iconfont.scss");
 
 .App {
   text-align: center;
@@ -349,7 +350,7 @@
     display: flex;
     border-radius: 12px 0px 12px 12px;
     opacity: 0;
-    transition: all 0.4s ease-out;
+    transition: all 0.3s ease-out;
     transform: translateY(-5px);
     visibility: hidden;
     -webkit-box-shadow: 0px 4px 16px -1px rgba(0, 0, 0, 0.1);
@@ -365,7 +366,7 @@
       border-left: 10px solid transparent;
       border-right: 10px solid transparent;
       border-bottom: 10px solid var(--accent-color);
-      transition: all 0.4s ease-out;
+      transition: all 0.3s ease-out;
     }
   }
 
@@ -542,6 +543,13 @@
     overflow: hidden;
     display: flex;
     align-items: flex-end;
+    border: 1px solid transparent;
+    background-color: var(--grey-3);
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: var(--grey-3);
+    }
 
     &::before {
       content: "";
@@ -599,7 +607,6 @@
 
 .rhap_main-controls-button {
   margin: 0;
-  background-color: var(--grey-3);
 }
 
 .player {
@@ -639,30 +646,6 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 :root {
   --text-color: black;
   --border-color: rgba(0, 0, 0, 0.2);
@@ -680,7 +663,7 @@
   --white: #fff;
   --grey-1: #1c1c1e;
   --grey-2: #222529;
-  --grey-3: #1c1c1e;
+  --grey-3: #1a1d21;
 }
 
 [data-theme-color="blueberry"] {
