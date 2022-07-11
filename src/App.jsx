@@ -76,8 +76,8 @@ function App() {
             <Sound name="coffee" setPlayCount={setPlayCount} playCount={playCount} />
             <Sound name="river" setPlayCount={setPlayCount} playCount={playCount} />
             <Sound name="wind" setPlayCount={setPlayCount} playCount={playCount} />
-            <Sound name="sunrise" setPlayCount={setPlayCount} playCount={playCount} />
             <Sound name="mountain" setPlayCount={setPlayCount} playCount={playCount} />
+            <Sound name="sunrise" setPlayCount={setPlayCount} playCount={playCount} />
           </div>
         </div>
       </div>
