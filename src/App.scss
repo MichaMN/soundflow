@@ -636,6 +636,16 @@
   }
 }
 
+.version {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 12px;
+  color: var(--text-color);
+  opacity: 0.5;
+  padding: 10px;
+}
+
 @media only screen and (max-width: 600px) {
   .audio__container {
     grid-template-columns: repeat(2, 1fr);

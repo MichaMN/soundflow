@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import Sound from "./components/sound/Sound";
-import appInfo from "./appversion.json;";
 import "./App.scss";
 
 function App() {
   const [theme, setTheme] = useState("light");
   const [themeColor, setThemeColor] = useState("blueberry");
   const [playCount, setPlayCount] = useState(0);
+
+  const version = require("../package.json").version;
 
   const toggleTheme = () => {
     const wobble = document.querySelector(".bg__curve");
@@ -85,7 +86,7 @@ function App() {
 
       <div className="background"></div>
 
-      <div>{appInfo.version}</div>
+      <div className="version">{version}</div>
     </div>
   );
 }
