@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Sound from "./components/sound/Sound";
+import appInfo from "./appversion.json;";
 import "./App.scss";
 
 function App() {
@@ -68,9 +69,9 @@ function App() {
         <div className="audio">
           <div className="audio__title">scenes</div>
           <div className="audio__container">
+            <Sound name="night" setPlayCount={setPlayCount} playCount={playCount} />
             <Sound name="rain" setPlayCount={setPlayCount} playCount={playCount} />
             <Sound name="fire" setPlayCount={setPlayCount} playCount={playCount} />
-            <Sound name="night" setPlayCount={setPlayCount} playCount={playCount} />
             <Sound name="ocean" setPlayCount={setPlayCount} playCount={playCount} />
             <Sound name="pool" setPlayCount={setPlayCount} playCount={playCount} />
             <Sound name="coffee" setPlayCount={setPlayCount} playCount={playCount} />
@@ -83,6 +84,8 @@ function App() {
       </div>
 
       <div className="background"></div>
+
+      <div>{appInfo.version}</div>
     </div>
   );
 }

@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ReactHowler from "react-howler";
+import Slider from "rc-slider";
+import "rc-slider/assets/index.css";
 
 const Sound = (props) => {
   const { name, playCount, setPlayCount } = props;
@@ -7,8 +9,17 @@ const Sound = (props) => {
   const [play, setPlay] = useState(false);
   const audio = require("../../assets/audio/" + name + ".wav");
 
-  const handlePlay = () => {
-    setPlay(!play);
+  useEffect(() => {
+    updatePlayCount();
+  }, [play]);
+
+  const handlePlay = (e) => {
+    if (e.target === e.currentTarget) {
+      setPlay(!play);
+    }
+  };
+
+  const updatePlayCount = () => {
     play ? addPlayCount() : subtractPlayCount();
   };
 
@@ -20,13 +31,14 @@ const Sound = (props) => {
   };
 
   return (
-    <div className="audio__wrapper" onClick={handlePlay}>
+    <div className={play ? "audio__wrapper playing" : "audio__wrapper"} onClick={handlePlay}>
       <ReactHowler src={audio} playing={play} volume={volume} loop={true} />
 
-      <i className={"icon-" + name}></i>
+      <i className={"icon-" + name} onClick={handlePlay}></i>
 
       <div className="audio__volume">
-        <input type="range" min="0" max="1" step=".05" value={volume} onChange={(e) => setVolume(parseFloat(e.target.value))} />
+        {/* <input type="range" min="0" max="1" step=".05" value={volume} onChange={(e) => setVolume(parseFloat(e.target.value))} /> */}
+        <Slider min={0} max={1} step=".05" value={volume} onChange={(value) => setVolume(parseFloat(value))} />
       </div>
     </div>
   );
