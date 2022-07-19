@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/soundflow/static/css/main.fd171573.css",
-    "main.js": "/soundflow/static/js/main.51becf2c.js",
+    "main.css": "/soundflow/static/css/main.b2e509b2.css",
+    "main.js": "/soundflow/static/js/main.aafddc32.js",
     "static/js/377.91a27851.chunk.js": "/soundflow/static/js/377.91a27851.chunk.js",
-    "static/media/coffee.mp3": "/soundflow/static/media/coffee.a74e3aff2b8cbae3a693.mp3",
-    "static/media/wind.mp3": "/soundflow/static/media/wind.f637adf35d02f5e0361b.mp3",
-    "static/media/fire.mp3": "/soundflow/static/media/fire.aeb95757e8740531422d.mp3",
-    "static/media/mountain.mp3": "/soundflow/static/media/mountain.072cfd52612f6dcb6b9f.mp3",
-    "static/media/sunrise.mp3": "/soundflow/static/media/sunrise.65448e1bcec548e5f994.mp3",
-    "static/media/ocean.mp3": "/soundflow/static/media/ocean.7a5936097f5816c28954.mp3",
-    "static/media/pool.mp3": "/soundflow/static/media/pool.29ca9020a6c17e94443a.mp3",
-    "static/media/river.mp3": "/soundflow/static/media/river.a9aa1bae4685c4568078.mp3",
-    "static/media/rain.mp3": "/soundflow/static/media/rain.958fda7728892146b9c1.mp3",
-    "static/media/night.mp3": "/soundflow/static/media/night.113ec67e061d16740797.mp3",
+    "static/media/ocean.wav": "/soundflow/static/media/ocean.c857fe8fdce73055a60d.wav",
+    "static/media/coffee.wav": "/soundflow/static/media/coffee.df605b538ea17754e55d.wav",
+    "static/media/wind.wav": "/soundflow/static/media/wind.ac8e989c0e41a6311ed0.wav",
+    "static/media/fire.wav": "/soundflow/static/media/fire.eed8a5958a7c524bad38.wav",
+    "static/media/mountain.wav": "/soundflow/static/media/mountain.dc84f33d9974765e5ab7.wav",
+    "static/media/sunrise.wav": "/soundflow/static/media/sunrise.950e47dccdb564d58b15.wav",
+    "static/media/pool.wav": "/soundflow/static/media/pool.6c51716ca32c86f8e3bd.wav",
+    "static/media/river.wav": "/soundflow/static/media/river.5a8f3e8da4d3edbd4bfa.wav",
+    "static/media/rain.wav": "/soundflow/static/media/rain.2b5c86ea6974656078ad.wav",
+    "static/media/night.wav": "/soundflow/static/media/night.c5566b332e34d53de77d.wav",
     "service-worker.js": "/soundflow/service-worker.js",
     "static/media/iconfont.svg?gyhuuz": "/soundflow/static/media/iconfont.7a7998842c3786508c13.svg",
     "static/media/avocado.png": "/soundflow/static/media/avocado.0bc69b1385178124ec09.png",
@@ -29,12 +29,12 @@
     "static/media/drop.svg": "/soundflow/static/media/drop.7c9718445750048bccbd.svg",
     "static/media/moon.svg": "/soundflow/static/media/moon.b940ef24d45715c65f5a.svg",
     "static/media/close.svg": "/soundflow/static/media/close.fbb0e8e312f7693d66bd.svg",
-    "main.fd171573.css.map": "/soundflow/static/css/main.fd171573.css.map",
-    "main.51becf2c.js.map": "/soundflow/static/js/main.51becf2c.js.map",
+    "main.b2e509b2.css.map": "/soundflow/static/css/main.b2e509b2.css.map",
+    "main.aafddc32.js.map": "/soundflow/static/js/main.aafddc32.js.map",
     "377.91a27851.chunk.js.map": "/soundflow/static/js/377.91a27851.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fd171573.css",
-    "static/js/main.51becf2c.js"
+    "static/css/main.b2e509b2.css",
+    "static/js/main.aafddc32.js"
   ]
 }
