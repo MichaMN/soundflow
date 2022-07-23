@@ -53,7 +53,7 @@ function App() {
             <div className="header__divider"></div>
             <div className="header__theme-menu-btn" onClick={toggleThemeMenu}></div>
             <div className="header__theme-menu">
-              <div className="header__theme-btn blueberry" theme="blueberry" onClick={handleThemeColor}></div>
+              <div className="header__theme-btn blueberry active" theme="blueberry" onClick={handleThemeColor}></div>
               <div className="header__theme-btn avocado" theme="avocado" onClick={handleThemeColor}></div>
               <div className="header__theme-btn cherry" theme="cherry" onClick={handleThemeColor}></div>
               <div className="header__theme-btn peach" theme="peach" onClick={handleThemeColor}></div>
