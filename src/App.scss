@@ -610,6 +610,63 @@
   }
 }
 
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--grey-1);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+  color: var(--text-color);
+
+  .logo__circle {
+    animation-play-state: running;
+    transition: none;
+  }
+  span {
+    transition: none;
+  }
+  animation: removePreloader 0.7s ease-in-out 2s forwards;
+
+  &__text {
+    font-size: 14px;
+    color: var(--accent-color);
+    margin-top: 10px;
+  }
+
+  .logo {
+    opacity: 0;
+    animation: showPreloaderLogo 0.5s cubic-bezier(0.41, 1.05, 0.68, 1) 0.25s forwards;
+  }
+}
+
+@keyframes removePreloader {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes showPreloaderLogo {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .rc-slider {
   width: 80%;
   margin: 6px auto;
