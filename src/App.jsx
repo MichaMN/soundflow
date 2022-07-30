@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Sound from "./components/sound/Sound";
 import "./App.scss";
 
@@ -9,11 +9,27 @@ function App() {
 
   const version = require("../package.json").version;
 
+  useEffect(() => {
+    const storedTheme = localStorage.getItem("theme");
+    const storedThemeColor = localStorage.getItem("themeColor");
+
+    setTheme(storedTheme || "dark");
+    setThemeColor(storedThemeColor || "blueberry");
+
+    console.log(theme);
+    // eslint-disable-next-line
+  }, []);
+
   const toggleTheme = () => {
     const wobble = document.querySelector(".bg__curve");
     setTheme(theme === "light" ? "dark" : "light");
     wobble.classList.toggle("jelly");
   };
+
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+    // eslint-disable-next-line
+  }, [theme]);
 
   const toggleThemeMenu = (e) => {
     e.target.classList.toggle("open");
@@ -26,6 +42,11 @@ function App() {
     });
     e.target.classList.add("active");
   };
+
+  useEffect(() => {
+    localStorage.setItem("themeColor", themeColor);
+    // eslint-disable-next-line
+  }, [themeColor]);
 
   return (
     <div className="App" data-theme={theme} data-theme-color={themeColor}>
