@@ -108,6 +108,20 @@ function App() {
       <div className="background"></div>
 
       <div className="version">{version}</div>
+
+      <div className="preloader">
+        <div className="logo">
+          <div className="logo__text">
+            sound<span>fl</span>
+          </div>
+          <div className="logo__circle playing">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <span>w</span>
+        </div>
+      </div>
     </div>
   );
 }
