@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/soundflow/static/css/main.b2e509b2.css",
-    "main.js": "/soundflow/static/js/main.aafddc32.js",
+    "main.css": "/soundflow/static/css/main.5e68b1e3.css",
+    "main.js": "/soundflow/static/js/main.643e1506.js",
     "static/js/377.91a27851.chunk.js": "/soundflow/static/js/377.91a27851.chunk.js",
     "static/media/ocean.wav": "/soundflow/static/media/ocean.c857fe8fdce73055a60d.wav",
     "static/media/coffee.wav": "/soundflow/static/media/coffee.df605b538ea17754e55d.wav",
@@ -29,12 +29,12 @@
     "static/media/drop.svg": "/soundflow/static/media/drop.7c9718445750048bccbd.svg",
     "static/media/moon.svg": "/soundflow/static/media/moon.b940ef24d45715c65f5a.svg",
     "static/media/close.svg": "/soundflow/static/media/close.fbb0e8e312f7693d66bd.svg",
-    "main.b2e509b2.css.map": "/soundflow/static/css/main.b2e509b2.css.map",
-    "main.aafddc32.js.map": "/soundflow/static/js/main.aafddc32.js.map",
+    "main.5e68b1e3.css.map": "/soundflow/static/css/main.5e68b1e3.css.map",
+    "main.643e1506.js.map": "/soundflow/static/js/main.643e1506.js.map",
     "377.91a27851.chunk.js.map": "/soundflow/static/js/377.91a27851.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b2e509b2.css",
-    "static/js/main.aafddc32.js"
+    "static/css/main.5e68b1e3.css",
+    "static/js/main.643e1506.js"
   ]
 }
