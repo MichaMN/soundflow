@@ -4,11 +4,9 @@
 
 Progressive Web App that plays recorded ambient soundloops from my home country, South Africa.
 
-
 ### → Live demo
 
 [soundflow.space](https://soundflow.space)
-
 
 ### → Run Locally
 
@@ -24,7 +22,6 @@ Start the server
   npm run start
 ```
 
-
 ### → Deploy to GH-Pages
 
 Install my-project with npm
@@ -32,11 +29,11 @@ Install my-project with npm
 ```bash
   git bash npm run deploy
 ```
-    
+
 ### → Features
 
-- Installable Web App
-- Seamless crossbrowser audio playback
-- Light / Dark mode
-- Different color themes
-- Anti homesickness
+-   Installable Web App
+-   Seamless crossbrowser audio playback
+-   Light / Dark mode
+-   Different color themes
+-   Anti homesickness
